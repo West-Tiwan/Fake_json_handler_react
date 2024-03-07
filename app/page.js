@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from "axios";
 import Page from "@/app/[id]/page";
 
@@ -10,7 +10,11 @@ const index = () => {
     setUser(res.data)
     console.log(res.data)
   }
-  return (
+    useEffect(() => {
+        getdata()
+    }, []);
+
+    return (
       <>
           <div className={"flex justify-center items-center m-4"}>
               <button onClick={getdata} className={"border-2 border-blue-300"}>Get Data</button>
