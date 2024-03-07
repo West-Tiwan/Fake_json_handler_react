@@ -1,6 +1,7 @@
 "use client"
 import React, {useState} from 'react'
 import axios from "axios";
+import Page from "@/app/[id]/page";
 
 const index = () => {
   const [user, setUser] = useState([]);
@@ -16,7 +17,7 @@ const index = () => {
           </div>
           <div className={"flex justify-center items-center"}>
           <ol className={"list-decimal"}>{user.map((e, index) => {
-              return <li key={index}>{e.username}  ------  <a href={info}>get data</a></li>
+              return <li key={index}>{e.username}  ------  <a href={`/${e.id}`}>get data</a></li>
           })}</ol>
           </div>
       </>
