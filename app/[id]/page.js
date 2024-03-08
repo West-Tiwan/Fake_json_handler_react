@@ -18,7 +18,7 @@ const Page = ({params}) => {
     const  {id} = params
     const [user, setUser] = useState("");
     const getdata = async ()=>{
-        const res =  await axios.get("https://jsonplaceholder.typicode.com/users/"+id)
+        const res =  await axios.get("https://jsonplaceholder.typicode.com/users/"+id).then(notify())
         setUser(res.data)
         console.log(res.data)
     }
