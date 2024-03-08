@@ -16,7 +16,7 @@ const index = () => {
     useEffect(() => {
         getdata()
     }, []);
-const notify = ()=>{toast.success('Data received', {
+const notify = ()=>{toast.success('Got Data', {
     position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: false,
