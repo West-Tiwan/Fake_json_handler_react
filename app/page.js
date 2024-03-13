@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
-const notify = ()=>{toast.success('Data received', {
+const notify = ()=>{toast.success('Data has been received', {
     position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: false,
